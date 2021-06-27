@@ -1,0 +1,52 @@
+package examen1;
+import java.util.Scanner;
+
+
+public class examen1 {
+	static int contadorsaludos;
+	static int contadordespedidas;
+	
+	static Scanner sc=new Scanner(System.in);
+	
+	
+	public static void saludos() {
+		System.out.println("Hola");
+	}
+	public static void despedidas() {
+		System.out.println("Adios");
+	}
+	public static void main(String[] args) {
+		System.out.println("1.- Saludar");
+		System.out.println("2.- Despedirse");
+		System.out.println("3.- Terminar");
+		System.out.println("Elegir opción[1-3]:");
+		System.out.println("Seleccione una opción, por favor");
+		
+		int contador=0;
+		while(contador<5) {
+		int opcion=sc.nextInt();
+			switch(opcion) {
+				case 1:
+					examen1.saludos();
+					contadorsaludos++;
+					contador++;
+					break;
+				case 2:
+					examen1.despedidas();
+					contadordespedidas++;
+					contador++;
+					break;
+				case 3:
+					System.out.println("La cantidad de saludos es= "+contadorsaludos);
+					System.out.println("La cantidad de despedidas es= "+contadordespedidas);
+					System.exit(0);
+					break;
+				default:
+					System.out.println("Error");
+				}
+		
+		
+		}
+
+	}
+}
